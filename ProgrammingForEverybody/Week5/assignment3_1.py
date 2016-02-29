@@ -12,8 +12,9 @@ try:
 except:
     rate = -1
 
-if hour == -1 or rate == - 1:
+if hour == -1 or rate == -1:
     print('Please input a number')
+    quit()
 else:
     if hour < 40:
         pay = hour * rate
