@@ -6,11 +6,21 @@ except:
     print('Could not find file', ifile)
     quit()
 
-# read file into memory
-rfile = ofile.read()
-# strip \n and whitespace in front and end
-sfile = rfile.strip()
-# upper case all letters
-ufile = sfile.upper()
+score = 0
+count = 0
 
-print(ufile)
+for i in ofile:
+    sc = i.strip()
+    if 'X-DSPAM-Confidence:' in sc:
+        count = count + 1
+
+        d = sc.find(':')
+        spamstring = sc[d+1:]
+        spamscore = float(spamstring)
+
+        score = score + spamscore
+
+
+avscore = score / count
+
+print('Average spam confidence:', avscore)
