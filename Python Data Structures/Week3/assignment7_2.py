@@ -23,4 +23,4 @@ for i in ofile:
 
 avscore = score / count
 
-print('Average spam confidence:', avscore)
+print('Average spam confidence: ', avscore)
