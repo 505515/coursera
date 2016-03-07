@@ -4,14 +4,14 @@ try:
     ofile = open(file, 'r')
 except:
     print('Could not open file:', file)
-
+    quit()
 
 c = 0
 
 for s in ofile:
     s.strip()
     if s.startswith('From '):
-        c = c + 1
+        c += 1
         line = s.split()
         email = line[1]
         print(email)
