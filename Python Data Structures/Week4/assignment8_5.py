@@ -17,6 +17,5 @@ for s in open_file:
         print(email)
 
 print("There were", c, "lines in the file with From as the first word")
-type(open_file)
 # python27
 # print("There were % s lines in the file with From as the first word") % c
