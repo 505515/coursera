@@ -32,7 +32,6 @@ for mailer in mbox:
 bigsender = None
 bigcount = None
 
-
 for key,value in mail.items():
     if bigcount is None or value > bigcount:
         bigsender = key
