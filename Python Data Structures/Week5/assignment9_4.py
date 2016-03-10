@@ -14,6 +14,7 @@ try:
     ofile = open(file, 'r')
 except:
     print('Could not open file:', file)
+    quit()
 
 mbox = list()
 mail = dict()
@@ -29,17 +30,16 @@ for mailer in mbox:
     mail[mailer] = mail.get(mailer, 0) + 1
 
 bigsender = None
-bigemail = 0
+bigcount = None
+
 
 for key,value in mail.items():
-    if value > bigemail:
+    if bigcount is None or value > bigcount:
         bigsender = key
-        bigemail = value
+        bigcount = value
 
-print(bigsender, bigemail)
+print(bigsender, bigcount)
 
-#print(mbox)
-#print(mail)
 
 
 
