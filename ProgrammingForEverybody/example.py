@@ -75,11 +75,13 @@ print(x % 100)
 print(x % 1000)
 print(x % 10000)
 
+# Addition of text
 x = 'Hello'
 y = 'World!'
 
 print(x + y)
 
+# user input
 prompt = input("Tell me something?\n")
 x = type(prompt)
 print(x)
