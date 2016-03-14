@@ -87,7 +87,8 @@ x = type(prompt)
 print(x)
 
 
-
+x = 'Find me a word'
+if 'Find' in x: print('found')
 
 
 
