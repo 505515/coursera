@@ -11,7 +11,7 @@ while True:
     data = mysock.recv(512).decode()
     if len(data) < 1:
         break
-    print(data)
+    #print(data)
 
 mysock.close()
 
@@ -20,9 +20,6 @@ ourl = urllib.request.urlopen(url)
 
 for i in ourl:
     i = i.strip()
-#    print(type(i))
     x = str(i)
-#    print(type(x))
-#    print(x)
-    y = re.findall('\'[a-zA-Z0-9 ]\S*', x)
+    y = re.findall('\'(\S+[a-zA-Z0-9 ().,]+)', x)
     print(y)
