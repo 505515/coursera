@@ -342,7 +342,7 @@ fopen = open(f, 'r')
 fm = fopen.read()
 fwrite = open(f, 'w')
 fwrite.write(fm)
-fwrite.write('\nmore')
+# fwrite.write('\nmore') # write more to file
 fwrite.close()
 
 # Chapter 8 - Lists
@@ -607,6 +607,41 @@ print(t)
 
 for key, val in d.items():
     print(val, key)
+
+
+# Chapter 11 - regex
+
+# import regex
+import re
+
+f = 'file.txt'
+fopen = open(f, 'r')
+
+# instead of .startswidth()
+for i in fopen:
+    i = i.strip()
+    if re.search('^v2', i):
+        print(i)
+
+# re.search - True if match
+# re.findall - return list with findings
+
+x = '<firstname.lastname@domain.com>'
+y = re.findall('[a-zA-Z0-9]\S*@\S*[a-zA-Z0-9]', x) # removes < >
+print(y)
+
+# [a-zA-Z0-9]\S*@\S*[a-zA-Z0-9], find single letter [a-zA-Z0-9], followed by zero or more no-white char. (\S*)
+# Followed by an @ sign. followed by zero or more no-white char (\S*). Followed by char or numbers [a-zA-Z0-9]
+
+# find stuff and return only matches in ()
+x = 'Data with value: 100'
+y = re.findall('^Data.*: ([0-9]+)', x)
+print(y)
+
+x = 'Data-with-value: 100'
+y = re.findall('^Data\S*: ([0-9]+)', x)
+print(y)
+
 
 
 
