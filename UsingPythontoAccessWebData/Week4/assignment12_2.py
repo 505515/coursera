@@ -25,10 +25,3 @@ for i in span:
 
 print('Count', c)
 print('Sum', s)
-
-
-
-
-
-
-
