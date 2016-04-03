@@ -16,6 +16,8 @@ except:
 
 xmldata = ET.fromstring(html)
 comment = xmldata.findall('comments/comment')
+# or
+comment = xmldata.findall('.//comment')
 
 c = 0
 
