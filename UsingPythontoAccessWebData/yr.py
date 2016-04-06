@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 import urllib.request
 
-#url = 'http://www.yr.no/sted/Norge/oslo/oslo/oslo/varsel.xml'
+url = 'http://www.yr.no/sted/Norge/oslo/oslo/oslo/varsel.xml'
 
 try:
     print('Retriving url:', url)
